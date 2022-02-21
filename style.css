@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /*Text*/
+  --Very-dark-desaturated-blue: #1d1e35;
+  --Soft-red: hsl(14, 88%, 65%);
+
+  /**backgound gradient */
+  --Soft-violet: #af67e9;
+  --Soft-blue: #6565e7;
+
+  /*Text*/
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: #787887;
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background: rgb(175, 103, 233);
+  background: linear-gradient(180deg, rgba(175, 103, 233, 1) 11%, rgba(101, 101, 231, 1) 100%, rgba(0, 212, 255, 1) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.container {
+  width: calc(0.6 * 1440px);
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  padding: 50px 30px;
+  position: relative;
+  min-height: 95vh;
+}
+.hero {
+  width: 50%;
+  position: relative;
+}
+.woman,
+.shadow {
+  max-width: 100%;
+  display: block;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.woman {
+  position: absolute;
+  z-index: 2;
+}
+.shadow {
+  position: absolute;
+}
+
+.box {
+  display: block;
+  width: 150px;
+  position: absolute;
+  left: -80px;
+  top: 44%;
+  z-index: 3;
+}
+.content {
+  width: 50%;
+}
+.content h1 {
+  margin-bottom: 30px;
+  color: var(--Very-dark-desaturated-blue);
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  color: var(--Very-dark-grayish-blue);
+  cursor: pointer;
+}
+.question:hover {
+  color: var(--Soft-red);
+}
+.fa-solid {
+  color: var(--Soft-red);
+}
+.faq {
+  border-bottom: 1px solid var(--Light-grayish-blue);
+  padding: 10px 0;
+}
+.answer {
+  padding: 10px 1rem 0 0;
+  color: var(--Dark-grayish-blue);
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    padding: 0px 20px 30px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    min-height: 0;
+  }
+
+  .content,
+  .hero {
+    width: 100%;
+  }
+  .woman {
+    src: url(./images/illustration-woman-online-mobile.svg);
+  }
+  .woman,
+  .shadow {
+    width: 90%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -60%);
+  }
+  .box {
+    width: 80px;
+    left: 15px;
+    top: 0;
+    transform: translateY(-40%);
+  }
+  .content h1 {
+    text-align: center;
+  }
+  .content {
+    margin-top: 130px;
+  }
+}
